@@ -20,24 +20,66 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+
+console.log('Request 1')
 const displayNames = [];
+
+function display(cb){
+  for (let i = 0; i < cb.length; i++){
+    displayNames.push("Name: "+ cb[i].animal_name + "Scientific: " + cb[i].scientific_name);
+  }
+}
+display(zooAnimals);
 console.log(displayNames);
 
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
-
 */
 
-const lowCaseAnimalNames
+console.log('task 2');
+
+let lowCaseAnimalNames = [];
+
+const lowercase = zooAnimals.map((animal_name) => {
+  lowCaseAnimalNames.push(animal_name.animal_name.toLocaleLowerCase());
+
+});
+
 console.log(lowCaseAnimalNames);
+
+
+
+// function lowerCase(cb){
+//     let obj = cb.map ((lc) => {
+//         for(let i=0; i < 2; i++){
+//           let lc = cb;
+//           lowCaseAnimalNames.push(lc[i].animal_name );
+//         };
+
+//     })
+//     return lowCaseAnimalNames;
+
+
+// };
+
+
+
+
+
+
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
+const lowPopulationAnimals = zooAnimals.filter((population)=> {
+  if(population.population < 5 ){
+    return population.animal_name
+  }
+});
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -45,8 +87,8 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-console.log(populationTotal);
+// let populationTotal = 0;
+// console.log(populationTotal);
 
 
 // ==== Callbacks ====  
