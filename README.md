@@ -27,13 +27,25 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+-.forEach call upon a specific function while .map actually creates a new array of called data. 
+
 2. Explain the difference between a callback and a higher order function.
+- A callback is a function that is passed down as an argument into another function.
+- A higher order function can receive a function as and arguement or return the function.
 
 3. What is closure?
+Closure is the range that your code has. 
 
 4. Describe the four rules of the 'this' keyword.
 
+  1. Window/Global Object Binding; means it is on a global scale and is highly accessible.
+  2. Implicit Binding; Allows new values to be assigned
+  3. new binding; allows a function to be binded to other code; 
+  4. explicit binding: binds specific data from prior function or class to new function
+
 5. Why do we need super() in an extended class?
+it is a keyword that allows binding of data
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -43,10 +55,10 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 > This section should include instruction for the sprint challenge. These should only cover things that are _not_ being evaluated by the challenge itself, e.g. environment/project setup, link to a starter project, etc. In general, this will be the following Git fork, clone, branch, commit, push, create pull request flow, though may need to be adapted for some specific challenges.
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: git push origin `<firstName-lastName>`
 
