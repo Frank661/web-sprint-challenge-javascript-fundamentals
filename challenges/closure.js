@@ -30,12 +30,11 @@ myFunction();
 // let counter = 0;
 function summation (number){
   let counter = 0;
-
  for(let i = 0; i < number ; i++){
-   (counter = number =+ i)
+    counter += (number-i)
  }
   
   return counter;
 };
 
-console.log(summation(4));
+console.log(summation(2)); 
